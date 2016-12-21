@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -30,15 +31,42 @@ public class hello extends HttpServlet {
 		System.out.println(b);
 		System.out.println(c);
 		SessionFactory sessionFactory =  new Configuration().configure().buildSessionFactory();        		
-	      userdet user = new userdet();
+	     
 	      Session session =	sessionFactory.openSession();
 	      session.beginTransaction();	
+	      Query queryResult = session.createQuery("from userdet");
+	       java.util.List allUsers;
+	       String pa,na;
+	       
+	       allUsers = queryResult.list();
+	       int f;
+	       f=0;
+	       for (int i = 0; i < allUsers.size(); i++) {
+	        userdet user = (userdet) allUsers.get(i);
+	        pa=user.getEmailid();
+	        na=user.getName();
+	        if(b.equals(pa)){
+	         f=1;
+	         break; 
+	         }
+	        }
+	         
+	           if(f!=1){
+	        	   
+	        	   
+	        userdet user= new userdet();  
 	      user.setName(a);
 	      user.setEmailid(b);
 	      user.setAvatar(c);
 	      session.save(user);
 	      session.getTransaction().commit();
 	      session.close();
+	      user=null;
+	       System.out.println(a);
 	}
-
+	           else
+	           {   System.out.println("duplicate");
+	           response.sendRedirect("h2.html");
+	           }
+	}
 }
