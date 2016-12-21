@@ -6,6 +6,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.javabrain.userdet;
+
 /**
  * Servlet implementation class hello
  */
@@ -24,6 +29,16 @@ public class hello extends HttpServlet {
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c);
+		SessionFactory sessionFactory =  new Configuration().configure().buildSessionFactory();        		
+	      userdet user = new userdet();
+	      Session session =	sessionFactory.openSession();
+	      session.beginTransaction();	
+	      user.setName(a);
+	      user.setEmailid(b);
+	      user.setAvatar(c);
+	      session.save(user);
+	      session.getTransaction().commit();
+	      session.close();
 	}
 
 }

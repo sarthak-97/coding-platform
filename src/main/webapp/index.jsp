@@ -29,6 +29,7 @@ function onSignIn(googleUser) {
 			alert("done");
 		}
 	});
+  response.redirect("a.html")
 }
 </script>
 <body>
