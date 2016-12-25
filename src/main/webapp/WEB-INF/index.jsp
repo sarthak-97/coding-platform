@@ -30,8 +30,7 @@ function onSignIn(googleUser) {
 		success: function(data){
 			console.log(data);
 			alert("done");
-			redirect: true,
-			  redirectURL = "/hello"
+			
 			
 		}
 	});
@@ -50,5 +49,7 @@ function onSignIn(googleUser) {
     });
   }
 </script>
+<br>
+
 </body>
 </html>
