@@ -7,7 +7,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>hello</servlet-name>
-    <url-pattern>/web.hello/*</url-pattern>
+    <url-pattern>/hello/*</url-pattern>
   </servlet-mapping>
   <servlet>
     <servlet-name>spring-dispatcher</servlet-name>
@@ -18,5 +18,5 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
   
-  
+    
 </web-app>
