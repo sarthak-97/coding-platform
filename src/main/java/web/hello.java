@@ -66,6 +66,7 @@ public class hello extends HttpServlet {
 	}
 	           else
 	           {   System.out.println("duplicate");
+	           response.sendRedirect("dash.jsp");
 	          
 	           }
 	}
