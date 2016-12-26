@@ -13,9 +13,20 @@
     <servlet-name>spring-dispatcher</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ques</display-name>
+  	<servlet-name>ques</servlet-name>
+  	<servlet-class>web.ques</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>spring-dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ques</servlet-name>
+  	<url-pattern>/ques</url-pattern>
   </servlet-mapping>
   
     

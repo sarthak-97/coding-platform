@@ -12,6 +12,10 @@ enter question title<input type=text name=t1><br>
 enter ques detail<textarea name=t2>
 </textarea><br>
 enter constraints<textarea name=t3>
+
+</textarea><br>
+enter input format<textarea name=t7>
+
 </textarea><br>
 enter sample test case<textarea name=t4>
 </textarea><br>
