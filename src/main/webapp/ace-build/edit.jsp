@@ -8,7 +8,6 @@
     body {
         overflow: hidden;
     }
-
     #editor {
         margin: 0;
         position: absolute;

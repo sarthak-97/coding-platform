@@ -3,25 +3,36 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xmlns:context="http://www.springframework.org/schema/context" 
 xmlns:aop="http://www.springframework.org/schema/aop" 
+xmlns:mvc="http://www.springframework.org/schema/mvc"
 xsi:schemaLocation="
 http://www.springframework.org/schema/beans 
 classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd 
 http://www.springframework.org/schema/context 
 classpath:/org/springframework/context/config/spring-context-3.0.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 http://www.springframework.org/schema/aop 
 classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
 "> 
     <bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
     <bean name="/welcome.html" class="org.spring.hellocontroller"/>
     <bean name="/index.html" class="org.spring.hellocontroller"/>
-   
+
+
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="prefix">
     <value>/WEB-INF/</value>
        </property>
        <property name="suffix">
-       <value>.jsp</value>
+       <value>*.jsp</value>
        </property>
+     
     </bean>
+     <mvc:resources mapping="/resources/**" location="/resources/src-noconflict/"	/>
+
+    <mvc:annotation-driven />
+      
     
+
+     
     </beans>

@@ -8,7 +8,6 @@
     body {
         overflow: hidden;
     }
-
     #editor {
         margin: 0;
         position: absolute;
@@ -28,7 +27,7 @@
     }
 }</pre>
 
-<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="ace-build/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
