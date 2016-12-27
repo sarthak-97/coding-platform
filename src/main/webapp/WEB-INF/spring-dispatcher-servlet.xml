@@ -14,6 +14,8 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 http://www.springframework.org/schema/aop 
 classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
 "> 
+
+
     <bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
     <bean name="/welcome.html" class="org.spring.hellocontroller"/>
     <bean name="/index.html" class="org.spring.hellocontroller"/>
@@ -28,7 +30,7 @@ classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
        </property>
      
     </bean>
-     <mvc:resources mapping="/resources/**" location="/resources/src-noconflict/"	/>
+     <mvc:resources mapping="/resources/**" location="/resources/src-noconflict"	/>
 
     <mvc:annotation-driven />
       

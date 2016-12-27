@@ -29,11 +29,15 @@ function onSignIn(googleUser) {
 		},
 		success: function(data){
 			console.log(data);
-			alert("done");
+			
+			window.location = data.url;
+			
+			
 			
 			
 		}
 	});
+
  
 }
 </script>

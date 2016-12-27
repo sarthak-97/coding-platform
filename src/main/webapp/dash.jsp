@@ -4,9 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>dashboard</title>
 </head>
 <body>
+<div align="left">
+welcome <%= request.getAttribute("t2") %> to dashboard
+</div>
+<div align=right>
+<nav>
+<a href=editor.jsp>editor page</a>
+<a href=editor.jsp>edit profile</a>
+<a href=editor.jsp>successful submission</a>
+<a href=editor.jsp>logout</a>
+</nav>
+</div>
 
 </body>
 </html>

@@ -1,7 +1,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<spring:url value="/resources/ace.js"  />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Editor</title>
@@ -28,7 +30,7 @@
     }
 }</pre>
 
-<script src="<c:url value="/resources/src-noconflict/ace.js" />" type="text/javascript" charset="utf-8"></script>
+<script src="<c:url value="/resources/ace.js" />" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/twilight");
