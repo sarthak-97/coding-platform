@@ -1,14 +1,15 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Editor</title>
+  <title>ACE Autocompletion demo</title>
   <style type="text/css" media="screen">
     body {
         overflow: hidden;
     }
-    #editor {
+    
+    #editor { 
         margin: 0;
         position: absolute;
         top: 0;
@@ -20,19 +21,30 @@
 </head>
 <body>
 
-<pre id="editor">function foo(items) {
-    var i;
-    for (i = 0; i &lt; items.length; i++) {
-        alert("Ace Rocks " + items[i]);
-    }
-}</pre>
 
-<script src="ace-build/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<pre id="editor">
+</pre>
+
+<!-- load ace -->
+<script src="resources/src/ace.js"></script>
+<!-- load ace language tools -->
+<script src="resources/src/ext-language_tools.js"></script>
 <script>
+    // trigger extension
+    ace.require("ace/ext/language_tools");
     var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/twilight");
-    editor.session.setMode("ace/mode/javascript");
+    editor.session.setMode("ace/mode/html");
+    editor.setTheme("ace/theme/tomorrow");
+    // enable autocompletion and snippets
+    editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: false
+    });
 </script>
 
+
+
+<script src="resources/src/show_own_source.js "></script>
 </body>
 </html>
