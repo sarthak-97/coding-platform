@@ -22,6 +22,15 @@
   </style>
 </head>
 <body>
+<div align=right>
+<nav>
+<a href="quespage.jsp#ques">ques page</a>
+<a href="profile.jsp#ques">edit profile</a>
+<a href=#>successful submission</a>
+<a href=#>logout</a>
+</nav>
+</div>
+<br>
 <form method='POST' action='/submission' enctype='multipart/form-data'>
 
 <div class="row">

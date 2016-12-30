@@ -7,7 +7,8 @@ package org.spring;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-	import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 	import org.springframework.web.servlet.mvc.AbstractController;
 	
 	public class hellocontroller {
@@ -30,6 +31,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 			return model;
 	}
 			
+		@RequestMapping(value = "/profile", method = RequestMethod.GET)
+		public ModelAndView redirect() {
+
+		  return new ModelAndView("redirect:profile");
+		}
 		
 	}
 
