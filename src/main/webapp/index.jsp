@@ -16,25 +16,19 @@ function onSignIn(googleUser) {
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
   $.ajax({
-		type: 'POST',
-		headers: {
- 			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-		},
 		url: 'hello',
+		
+		
+		
 		data: {
 			'user_id':profile.getName(),
 			'user_email':profile.getEmail(),
 			'user_img':profile.getImageUrl(),
 			
 		},
-		success: function(data){
-			console.log(data);
-			
-			window.location = data.url;
-			
-			
-			
-			
+		type: 'get',
+		success: function(data){	
+					window.location = 'hello';		
 		}
 	});
 

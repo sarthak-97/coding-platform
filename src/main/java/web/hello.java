@@ -23,8 +23,11 @@ public class hello extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+
 		// TODO Auto-generated method stub
 		
 		String a,b,c,d;
@@ -71,7 +74,7 @@ public class hello extends HttpServlet {
 	}
 	           else
 	           {   System.out.println("duplicate");
-	                response.sendRedirect("profile.jsp?t2=" + b);
+	                response.sendRedirect("dash.jsp");
 	         
 	           }
 	}

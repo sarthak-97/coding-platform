@@ -31,11 +31,7 @@ import org.springframework.web.servlet.ModelAndView;
 			return model;
 	}
 			
-		@RequestMapping(value = "/profile", method = RequestMethod.GET)
-		public ModelAndView redirect() {
-
-		  return new ModelAndView("redirect:profile");
-		}
+		
 		
 	}
 

@@ -30,6 +30,13 @@
   	<servlet-name>gapi</servlet-name>
   	<servlet-class>web.gapi</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>h</display-name>
+  	<servlet-name>h</servlet-name>
+  	<servlet-class>web.h</servlet-class>
+  </servlet>
   <servlet-mapping>
     <servlet-name>spring-dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
@@ -41,6 +48,10 @@
   <servlet-mapping>
   	<servlet-name>gapi</servlet-name>
   	<url-pattern>/gapi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>h</servlet-name>
+  	<url-pattern>/h</url-pattern>
   </servlet-mapping>
   
   
