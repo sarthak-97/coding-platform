@@ -1,0 +1,59 @@
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FirstSpringMvcProject</display-name>
+    <welcome-file-list>
+    <welcome-file>welcome.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>web.hello</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>spring-dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ques</display-name>
+  	<servlet-name>ques</servlet-name>
+  	<servlet-class>web.ques</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>gapi</display-name>
+  	<servlet-name>gapi</servlet-name>
+  	<servlet-class>web.gapi</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>h</display-name>
+  	<servlet-name>h</servlet-name>
+  	<servlet-class>web.h</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>spring-dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ques</servlet-name>
+  	<url-pattern>/ques</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>gapi</servlet-name>
+  	<url-pattern>/gapi</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>h</servlet-name>
+  	<url-pattern>/h</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+</web-app>
