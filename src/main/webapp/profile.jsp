@@ -10,7 +10,7 @@
 <div align=right>
 <nav>
 <a href="quespage.jsp#ques">ques page</a>
-<a href=#>edit profile</a>
+<a href=profile.jsp>edit profile</a>
 <a href=#>successful submission</a>
 <a href=#>logout</a>
 </nav>
