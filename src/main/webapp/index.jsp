@@ -16,19 +16,22 @@ function onSignIn(googleUser) {
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
   $.ajax({
-		url: 'hello',
-		
-		
-		
+		url: 'profile.jsp',
+		type: 'POST',
+		dataType : "html",
 		data: {
 			'user_id':profile.getName(),
 			'user_email':profile.getEmail(),
 			'user_img':profile.getImageUrl(),
 			
 		},
-		type: 'get',
-		success: function(data){	
-					window.location = 'hello';		
+		
+		success: function(data){
+			console.log(data);
+			location.href="profile.jsp";
+			
+			
+						
 		}
 	});
 

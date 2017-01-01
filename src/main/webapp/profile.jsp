@@ -17,9 +17,9 @@
 </div>
 <div>
 <form name=frm action="hello">
-<input type="text" value="<%= request.getAttribute("t2") %> ">
+<%= request.getParameter("user_id") %>
 <br>
-enter your name<input type=text name=t1><br>
+enter your name<input type=text name=t1 value="<%= request.getParameter("user_id") %>"><br>
 enter your admno<input type=text name=t2><br>
 enter you year<input type=text name=t3><br>
 <input type="submit">
