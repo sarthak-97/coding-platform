@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="google-signin-client_id" content="30081514308-nsdkis6qpuda4f9vr2mb2d3aeg0otqgq.apps.googleusercontent.com">
+<meta name="google-signin-client_id" content="50376313406-hp2i1too98fc8nbgpd9cd0bvs0j4s0qj.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
@@ -15,23 +15,13 @@ function onSignIn(googleUser) {
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
-  $.ajax({
-		url: 'hello',
-		
-		
-		
-		data: {
-			'user_id':profile.getName(),
-			'user_email':profile.getEmail(),
-			'user_img':profile.getImageUrl(),
-			
-		},
-		type: 'get',
-		success: function(data){	
-					window.location = 'hello';		
-		}
-	});
-
+  var redirectUrl = 'login';
+  var form = $('<form action="' + redirectUrl + '" method="post">' +
+                      '<input type="text" name="t2" value="' +
+                       googleUser.getAuthResponse().id_token + '" />' +
+                                                            '</form>');
+$('body').append(form);
+form.submit();
  
 }
 </script>
