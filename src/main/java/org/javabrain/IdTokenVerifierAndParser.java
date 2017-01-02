@@ -11,7 +11,7 @@ public class IdTokenVerifierAndParser {
 
         JacksonFactory jacksonFactory = new JacksonFactory();
         GoogleIdTokenVerifier googleIdTokenVerifier =
-                            new GoogleIdTokenVerifier(new NetHttpTransport(), jacksonFactory);
+                        new GoogleIdTokenVerifier(new NetHttpTransport(), jacksonFactory);
 
         GoogleIdToken token = GoogleIdToken.parse(jacksonFactory, tokenString);
 

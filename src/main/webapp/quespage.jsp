@@ -31,7 +31,6 @@
 </nav>
 </div>
 <br>
-<form method='POST' action='/submission' enctype='multipart/form-data'>
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
@@ -63,6 +62,8 @@
 	</div>
 </div>
 <br>
+<form method="post" action="h" >
+
  <select class="language">
   <option value="Select">Select</option>
   <option value="C">C</option>
@@ -71,13 +72,14 @@
   <option value="Python">Python</option>
 </select> <br>
 <br>
-<input type='submit' class='btn btn-default' value='Submit' />
+
 <br>
 
 
 
-<pre id="editor2">minHeight = 2 lines</pre>
-
+<textarea id="editor2" name="editor2">minHeight = 2 lines</textarea>
+<input type="submit"  />
+</form>
 <!-- load ace -->
 <script src="resources/src/ace.js"></script>
 <!-- load ace language tools -->
@@ -105,7 +107,7 @@
 
 
 <script src="resources/src/show_own_source.js "></script>
-</form>
+
 
 </body>
 </html>

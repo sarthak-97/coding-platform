@@ -25,7 +25,7 @@ public class loginservlet extends HttpServlet {
     public loginservlet() {
         super();
         // TODO Auto-generated constructor stub
-    }
+  }
 
         @Override
         protected void doPost (HttpServletRequest req,

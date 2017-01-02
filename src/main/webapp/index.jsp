@@ -74,7 +74,6 @@ function onSignIn(googleUser) {
 			console.log(data);
 			location.href="profile.jsp";
 			
-			
 						
 		}
 	});
