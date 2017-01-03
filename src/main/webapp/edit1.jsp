@@ -20,7 +20,7 @@
   </style>
 </head>
 <body>
-<form method='POST' action='/submission' enctype='multipart/form-data'>
+<form method='POST' action='/h' enctype='multipart/form-data'>
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
