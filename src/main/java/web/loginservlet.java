@@ -58,7 +58,7 @@ public class loginservlet extends HttpServlet {
       	         session.beginTransaction();
       	       Query queryResult = session.createQuery("from userdet");
     	       java.util.List allUsers;
-    	       String pa,na;
+    	       String pa,na,a,b,c;
     	       
     	       allUsers = queryResult.list();
     	       int f;
@@ -67,7 +67,9 @@ public class loginservlet extends HttpServlet {
     	        userdet user = (userdet) allUsers.get(i);
     	        pa=user.getEmailid();
     	        na=user.getName();
-    	        if(email.equals(pa)){
+    	        a=user.getBranch();
+    	        b=user.getYear();
+    	        if(email.equals(pa) & a!= " " & b!= " "){
     	         f=1;
     	         break; 
     	         }
@@ -93,7 +95,7 @@ public class loginservlet extends HttpServlet {
     	           {   System.out.println("duplicate");
     	         
 			       req.setAttribute("t4", name);
-			       req.getRequestDispatcher("/profile.jsp").forward(req, resp);
+			       req.getRequestDispatcher("/dash.jsp").forward(req, resp);
     	         
     	           }
     	
