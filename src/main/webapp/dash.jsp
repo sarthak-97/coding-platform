@@ -8,12 +8,12 @@
 </head>
 <body>
 <div align="left">
-welcome <%= request.getAttribute("t2") %> to dashboard
+welcome <%= request.getAttribute("t4") %> to dashboard
 </div>
 <div align=right>
 <nav>
-<a href="quespage.jsp#ques?name=<%= request.getAttribute("t2") %> ">ques page</a>
-<a href="profile.jsp#ques<%= request.getAttribute("t2") %> ">edit profile</a>
+<a href="quespage.jsp#ques?name=<%= request.getAttribute("t4") %> ">ques page</a>
+<a href="profile.jsp#ques<%= request.getAttribute("t4") %> ">edit profile</a>
 <a href=editor.jsp>successful submission</a>
 <a href=editor.jsp>logout</a>
 </nav>

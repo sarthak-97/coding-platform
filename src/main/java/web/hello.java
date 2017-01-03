@@ -26,16 +26,16 @@ public class hello extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+
 
 
 		// TODO Auto-generated method stub
 		
 		String a,b,c,d;
 		
-		a=request.getParameter("user_id");
-		b=request.getParameter("user_email");
-		c=request.getParameter("user_img");
+		a=request.getParameter("t2");
+		b=request.getParameter("t3");
+		c=request.getParameter("t1");
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c);
@@ -52,32 +52,30 @@ public class hello extends HttpServlet {
 	       f=0;
 	       for (int i = 0; i < allUsers.size(); i++) {
 	        userdet user = (userdet) allUsers.get(i);
-	        pa=user.getEmailid();
+	        pa=user.getAdmno();
 	        na=user.getName();
-	        if(b.equals(pa)){
+	        if(c.equals(na)){
 	         f=1;
 	         break; 
 	         }
 	        }
 	         
-	           if(f!=1){
+	           if(f==1){
 	        	   
 	        	   
 	        userdet user= new userdet();  
-	      user.setName(a);
-	      user.setEmailid(b);
-	      user.setAvatar(c);
+	      user.setAdmno(a);
+	      user.setBranch(b);
+	   
 	      session.save(user);
 	      session.getTransaction().commit();
 	      session.close();
 	      user=null;
-	       System.out.println(a);
+	       System.out.println(b);
+	       request.setAttribute("t4", c);
+	       request.getRequestDispatcher("/dash.jsp").forward(request, response);
 	}
-	           else
-	           {   System.out.println("duplicate");
-	                response.sendRedirect("dash.jsp");
-	         
-	           }
+	           
 	}
 
 }
