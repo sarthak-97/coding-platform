@@ -15,25 +15,18 @@ function onSignIn(googleUser) {
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
-  $.ajax({
-		url: 'profile.jsp',
-		type: 'POST',
-		dataType : "html",
-		data: {
-			'user_id':profile.getName(),
-			'user_email':profile.getEmail(),
-			'user_img':profile.getImageUrl(),
-			
-		},
-		
-		success: function(data){
-			console.log(data);
-			location.href="profile.jsp";
-			
-			
-						
-		}
-	});
+ 
+  var id_token = googleUser.getAuthResponse().id_token;
+  console.log("ID Token: " + id_token);
+ 
+  var redirectUrl ='hello';
+  
+  var form = $('<form action="' + redirectUrl + '" method="post">' +
+                   '<input type="text" name="user_id" value="' +
+                    googleUser.getAuthResponse().id_token + '" />' +
+                                                         '</form>');
+  $('body').append(form);
+  form.submit();
 
  
 }
@@ -42,6 +35,8 @@ function onSignIn(googleUser) {
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
 <a href="#" onclick="signOut();">Sign out</a>
+<br>
+<%  %>
 <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();

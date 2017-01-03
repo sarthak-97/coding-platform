@@ -19,7 +19,7 @@ welcome <%= request.getAttribute("t2") %> to dashboard
 </nav>
 </div>
 <div id=ques>
-</div>
+</div> 
 
 </body>
 </html>
