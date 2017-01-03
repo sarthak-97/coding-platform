@@ -19,7 +19,11 @@ welcome <%= request.getAttribute("t2") %> to dashboard
 </nav>
 </div>
 <div id=ques>
+<<<<<<< HEAD
 </div> 
+=======
+</div>
+>>>>>>> branch 'master' of https://github.com/sarthak-97/google-login.git
 
 </body>
 </html>
