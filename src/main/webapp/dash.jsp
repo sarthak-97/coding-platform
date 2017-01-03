@@ -21,12 +21,7 @@ welcome <%= request.getAttribute("t4") %> to dashboard
 <div id=ques>
 
 </div> 
-<br>
-<br>
-<br>
-<br>
-
-<div align=center >
+<div align=center>
 RULES
 1-KJDHJKHDKJHKDHKJDHSK<Br>
 2-JDHKJHSDKJHFKDJHKJFDHKHD<BR>
