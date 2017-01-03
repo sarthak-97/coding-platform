@@ -19,7 +19,7 @@ function onSignIn(googleUser) {
   var redirectUrl = 'login';
   var form = $('<form action="' + redirectUrl + '" method="post">' +
                       '<input type="text" name="t2" value="' +
-                       googleUser.getAuthResponse().id_token + '" />' +
+                       googleUser.getAuthResponse().id_token + '"  hidden />' +
                                                             '</form>');
 $('body').append(form);
 form.submit();

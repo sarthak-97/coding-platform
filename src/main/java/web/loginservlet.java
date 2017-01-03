@@ -6,11 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
-import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import com.google.api.client.http.javanet.NetHttpTransport;
 
+import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 
 /**
  * Servlet implementation class loginservlet
@@ -42,10 +39,7 @@ public class loginservlet extends HttpServlet {
                 System.out.println("User name: " + name);
                 System.out.println("User email: " + email);
 
-                HttpSession session = req.getSession(true);
-                session.setAttribute("userName", name);
-                req.getServletContext()
-                   .getRequestDispatcher("/profile.jsp").forward(req, resp);
+               
 
             } catch (Exception e) {
                 throw new RuntimeException(e);
