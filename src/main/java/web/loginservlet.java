@@ -32,7 +32,7 @@ public class loginservlet extends HttpServlet {
             resp.setContentType("text/html");
 
             try {
-                String idToken = req.getParameter("id_token");
+                String idToken = req.getParameter("t2");
                 GoogleIdToken.Payload payLoad = IdTokenVerifierAndParser.getPayload(idToken);
                 String name = (String) payLoad.get("name");
                 String email = payLoad.getEmail();
