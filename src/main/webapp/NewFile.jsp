@@ -22,7 +22,7 @@ data = {
     'client_secret': CLIENT_SECRET,
     'async': 0,
     'source': source,
-    'lang': " <%=request.getAttribute("t3")%> ",
+    'lang': " <%=request.getAttribute("t2")%> ",
     'time_limit': 5,
     'memory_limit': 262144,
 }
