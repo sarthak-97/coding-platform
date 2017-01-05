@@ -21,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 		public ModelAndView helloworld(){
 			
 			ModelAndView modelandview = new ModelAndView("hellopage");
-			modelandview.addObject("welcome","hi user this is spring app");
+			modelandview.addObject("welcome1","hi user this is spring app");
 			
 			return modelandview;
 			
@@ -29,7 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 		@RequestMapping("/queschoose")
 		public ModelAndView hello(){
 			
-			ModelAndView model = new ModelAndView("hellopage");
+			ModelAndView model = new ModelAndView("quespage");
 			model.addObject("welcome","hi user this is spring app");
 			SessionFactory sessionFactory =  new Configuration().configure().buildSessionFactory();
 			 Session session =	sessionFactory.openSession();
