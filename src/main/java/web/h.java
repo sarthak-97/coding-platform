@@ -36,7 +36,7 @@ public class h extends HttpServlet {
         lang=request.getParameter("lang");	
         response.setContentType("text/html");
 	       request.setAttribute("t2",lang );
-	       request.setAttribute("t3",a );
+	       request.setAttribute("t3",a ); 
 	       request.getRequestDispatcher("/NewFile.html").forward(request, response);
 	        
 	}
