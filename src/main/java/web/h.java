@@ -30,9 +30,15 @@ public class h extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		String a;
+		
+		String a,lang;
 		a=request.getParameter("editor2");
-		System.out.println(a);
+        lang=request.getParameter("lang");	
+        response.setContentType("text/html");
+	       request.setAttribute("t2",lang );
+	       request.setAttribute("t3",a );
+	       request.getRequestDispatcher("/NewFile.html").forward(request, response);
+	        
 	}
 
 }
