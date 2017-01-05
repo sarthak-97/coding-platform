@@ -32,7 +32,7 @@
 </div>
 <br>
 select ques no
-<form name=frm action="/queschoose.html" method=post>
+<form name=frm action="queschoose.html" method=post>
 <input type="submit" value="1" style="height:0.8cm;width:0.8cm" name=b1>
 <input type="button" value="2" style="height:0.8cm;width:0.8cm" name=b2>
 <input type="button" value="3" style="height:0.8cm;width:0.8cm" name=b3>
