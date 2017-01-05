@@ -26,7 +26,7 @@ classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
        <property name="suffix">
-       <value>*.jsp</value>
+       <value>*.java</value>
        </property>
      
     </bean>

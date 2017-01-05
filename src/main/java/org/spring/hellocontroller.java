@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 			return modelandview;
 			
 		}
-		@RequestMapping("/index")
+		@RequestMapping("/queschoose")
 		public ModelAndView hello(){
 			
 			ModelAndView model = new ModelAndView("index");
