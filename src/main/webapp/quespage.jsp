@@ -88,7 +88,7 @@ select ques no
 
 
 
-<textarea id="editor2" name="editor2">minHeight = 2 lines</textarea>
+<textarea id="editor2" name="editor2"></textarea>
 <input type="submit"  />
 </form>
 <!-- load ace -->
