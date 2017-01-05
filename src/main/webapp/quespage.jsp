@@ -83,13 +83,13 @@ select ques no
   <option value="Python">Python</option>
 </select> <br>
 <br>
-
+<input type="submit"  />
 <br>
 
 
 
 <textarea id="editor2" name="editor2"></textarea>
-<input type="submit"  />
+
 </form>
 <!-- load ace -->
 <script src="resources/src/ace.js"></script>
@@ -105,7 +105,7 @@ select ques no
     editor2.setTheme("ace/theme/tomorrow_night_blue");
     editor2.session.setMode("ace/mode/html");
     editor2.setAutoScrollEditorIntoView(true);
-    editor2.setOption("maxLines", 30);
+    editor2.setOption("maxLines", 16);
     editor2.setOption("minLines", 8);
 
    
