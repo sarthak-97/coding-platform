@@ -19,6 +19,7 @@ classpath:/org/springframework/aop/config/spring-aop-3.0.xsd
 	    <bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
 	    <bean name="/welcome.html" class="org.spring.hellocontroller"/>
 	    <bean name="/index.html" class="org.spring.hellocontroller"/>
+	    <bean name="/queschoose.html" class="org.spring.hellocontroller"/>
         
 <bean
     class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter">
