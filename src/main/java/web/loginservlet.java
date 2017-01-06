@@ -69,7 +69,7 @@ public class loginservlet extends HttpServlet {
     	        na=user.getName();
     	        a=user.getBranch();
     	        b=user.getYear();
-    	        if(email.equals(pa) & a!= " " & b!= " "){
+    	        if(email.equals(pa) ){
     	         f=1;
     	         break; 
     	         }
