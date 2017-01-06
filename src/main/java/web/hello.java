@@ -67,7 +67,7 @@ public class hello extends HttpServlet {
 	      user.setAdmno(a);
 	      user.setBranch(b);
 	   
-	      session.save(user);
+	      session.update(user);
 	      session.getTransaction().commit();
 	      session.close();
 	      user=null;
