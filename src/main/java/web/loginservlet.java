@@ -94,7 +94,7 @@ public class loginservlet extends HttpServlet {
     	      session.close();
     	      user=null;
     	       System.out.println(name);
-    	       req.setAttribute("t4", name);
+    	       req.setAttribute("t4", email);
 		       req.getRequestDispatcher("/profile.jsp").forward(req, resp);
 	         
     	}
@@ -102,7 +102,7 @@ public class loginservlet extends HttpServlet {
     	           { 
     	        	   if(f==2){
                            System.out.println("no year record found");
-    				       req.setAttribute("t4", name);
+    				       req.setAttribute("t4", email);
     				       req.getRequestDispatcher("/profile.jsp").forward(req, resp);
     	    	         
     	        		   

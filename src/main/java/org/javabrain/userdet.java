@@ -7,8 +7,9 @@ import javax.persistence.Id;
 
 @Entity
 public class userdet {
-	@Id @GeneratedValue
+	 @GeneratedValue
 	int id;
+	 @Id
 	private String emailid;
 	private String avatar;
 	private String year;

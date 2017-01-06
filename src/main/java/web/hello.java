@@ -31,7 +31,10 @@ public class hello extends HttpServlet {
 
 		// TODO Auto-generated method stub
 		
-		String a,b,c,d;
+		String a,b,c,d,g;
+		g=null;
+		  String pa,na,e;
+	       
 		
 		a=request.getParameter("t2");
 		b=request.getParameter("t3");
@@ -45,17 +48,19 @@ public class hello extends HttpServlet {
 	      session.beginTransaction();	
 	      Query queryResult = session.createQuery("from userdet");
 	       java.util.List allUsers;
-	       String pa,na;
-	       
+	     
 	       allUsers = queryResult.list();
 	       int f;
 	       f=0;
 	       for (int i = 0; i < allUsers.size(); i++) {
 	        userdet user = (userdet) allUsers.get(i);
 	        pa=user.getAdmno();
-	        na=user.getName();
+	        na=user.getEmailid();
+	        e=user.getName();
+	        g=e;
 	        if(c.equals(na)){
 	         f=1;
+	         
 	         break; 
 	         }
 	        }
@@ -63,16 +68,16 @@ public class hello extends HttpServlet {
 	           if(f==1){
 	        	   
 	        	   
-	        userdet user= new userdet();  
+	        userdet user = (userdet)session.get(userdet.class,c) ; 
 	      user.setAdmno(a);
-	      user.setBranch(b);
+	      user.setYear(b);
 	   
 	      session.update(user);
 	      session.getTransaction().commit();
 	      session.close();
 	      user=null;
 	       System.out.println(b);
-	       request.setAttribute("t4", c);
+	       request.setAttribute("t4", g);
 	       request.getRequestDispatcher("/dash.jsp").forward(request, response);
 	}
 	           
