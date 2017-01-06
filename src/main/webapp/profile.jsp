@@ -30,7 +30,7 @@
 
 <br>
 <form name=frm action="hello">
-enter your name<input type=text name=t1 value="<%= request.getAttribute("t4") %>"><br>
+enter your email<input type=text name=t1 value="<%= request.getAttribute("t4") %>"><br>
 
 
 enter your admno<input type=text name=t2><br>

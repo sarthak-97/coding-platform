@@ -32,8 +32,8 @@
 </div>
 <br>
 select ques no
-<form name=frm action="#" method=post>
-<input type="button" value="1" style="height:0.8cm;width:0.8cm" name=b1>
+<form name=frm >
+<input type="submit" value="1" style="height:0.8cm;width:0.8cm" name=b1>
 <input type="button" value="2" style="height:0.8cm;width:0.8cm" name=b2>
 <input type="button" value="3" style="height:0.8cm;width:0.8cm" name=b3>
 <input type="button" value="4" style="height:0.8cm;width:0.8cm" name=b4><br>
@@ -45,7 +45,7 @@ select ques no
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
-    Question : <br /><br />
+    Question :  <br /><br />
     </div>
 </div>
 
@@ -58,7 +58,6 @@ select ques no
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
 	Input Format <br /><br />
-	
 	</div>
 </div>
 
@@ -86,11 +85,11 @@ select ques no
 <br>
 
 <br>
+<br>
 
 
+<textarea id="editor2" name="editor2"></textarea>
 
-<textarea id="editor2" name="editor2">minHeight = 2 lines</textarea>
-<input type="submit"  />
 </form>
 <!-- load ace -->
 <script src="resources/src/ace.js"></script>
@@ -106,7 +105,7 @@ select ques no
     editor2.setTheme("ace/theme/tomorrow_night_blue");
     editor2.session.setMode("ace/mode/html");
     editor2.setAutoScrollEditorIntoView(true);
-    editor2.setOption("maxLines", 30);
+    editor2.setOption("maxLines", 16);
     editor2.setOption("minLines", 8);
 
    
@@ -117,7 +116,7 @@ select ques no
 
 
 
-
+<input type="submit"  >
 <script src="resources/src/show_own_source.js "></script>
 
 
