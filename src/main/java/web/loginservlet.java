@@ -70,12 +70,19 @@ public class loginservlet extends HttpServlet {
     	        a=user.getBranch();
     	        b=user.getYear();
     	        if(email.equals(pa) ){
-    	         f=1;
+    	         if( b==null){
+    	        	 f=2;
+    	        	 break;
+    	         }
+    	         else 
+    	         {
+    	        	 f=1;
+    	         }
     	         break; 
     	         }
     	        }
     	         
-    	           if(f!=1){
+    	           if(f!=1 & f!=2){
     	        	   
     	        	   
     	        userdet user= new userdet();  
@@ -92,13 +99,22 @@ public class loginservlet extends HttpServlet {
 	         
     	}
     	           else
-    	           {   System.out.println("duplicate");
+    	           { 
+    	        	   if(f==2){
+                           System.out.println("no year record found");
+    				       req.setAttribute("t4", name);
+    				       req.getRequestDispatcher("/profile.jsp").forward(req, resp);
+    	    	         
+    	        		   
+    	        	   }
+    	        	   else{
+    	        	   System.out.println("duplicate");
     	         
 			       req.setAttribute("t4", name);
 			       req.getRequestDispatcher("/dash.jsp").forward(req, resp);
     	         
     	           }
-    	
+    	           }
       	      
             } catch (Exception e) {
                 throw new RuntimeException(e);
