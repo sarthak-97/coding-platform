@@ -32,7 +32,7 @@
 </div>
 <br>
 select ques no
-<form name=frm >
+<form name=frm action="h" >
 <input type="submit" value="1" style="height:0.8cm;width:0.8cm" name=b1>
 <input type="button" value="2" style="height:0.8cm;width:0.8cm" name=b2>
 <input type="button" value="3" style="height:0.8cm;width:0.8cm" name=b3>
@@ -73,7 +73,8 @@ select ques no
 	</div>
 </div>
 <br>
-<form method="post" action="h" >
+<form method="post" action="h1" >
+
 
  <select class="language">
   <option value="Select">Select</option>
@@ -90,7 +91,7 @@ select ques no
 
 <textarea id="editor2" name="editor2"></textarea>
 
-</form>
+
 <!-- load ace -->
 <script src="resources/src/ace.js"></script>
 <!-- load ace language tools -->
@@ -119,7 +120,7 @@ select ques no
 <input type="submit"  >
 <script src="resources/src/show_own_source.js "></script>
 
-
+</form>
 </body>
 </html>
     
