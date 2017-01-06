@@ -37,13 +37,12 @@ public class h extends HttpServlet {
         lang=request.getParameter("lang");	
 
 	       request.setAttribute("t2",lang );
-<<<<<<< HEAD
+
 	      
 	       request.getRequestDispatcher("/NewFile.html").forward(request, response);
-=======
 	       request.setAttribute("t3",a ); 
 	       request.getRequestDispatcher("NewFile.jsp").forward(request, response);
->>>>>>> c2aa80f0de55303e83c063fe678894b1d73212b1
+
 	        
 	}
 
