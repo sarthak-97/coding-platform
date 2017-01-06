@@ -3,6 +3,7 @@ package web;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class h
- */
+ */@WebServlet(urlPatterns = {"/h"})
 public class h extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -36,7 +37,7 @@ public class h extends HttpServlet {
         lang=request.getParameter("lang");	
         response.setContentType("text/html");
 	       request.setAttribute("t2",lang );
-	       request.setAttribute("t3",a );
+	      
 	       request.getRequestDispatcher("/NewFile.html").forward(request, response);
 	        
 	}
