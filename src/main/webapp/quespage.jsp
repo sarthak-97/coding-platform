@@ -76,7 +76,7 @@ select ques no
 <form method="post" action="h1" >
 
 
- <select class="language">
+ <select class="language" name="lang">
   <option value="Select">Select</option>
   <option value="C">C</option>
   <option value="C++">C++</option>
