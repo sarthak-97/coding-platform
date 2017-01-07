@@ -6,7 +6,7 @@
 
 
 
-RUN_URL = u'http://api.hackerearth.com/code/run/'
+RUN_URL = 'http://api.hackerearth.com/code/run/'
 CLIENT_SECRET = '5db3f1c12c59caa1002d1cb5757e72c96d969a1a'
 
 source = "<%= request.getAttribute("t2") %>"
@@ -22,8 +22,9 @@ data = {
 
 
 r = requests.post(RUN_URL, data=data)
-print r.json()
+
 </script>
 hello api
+System.out.println( r.json());
 </body>
 </html>
