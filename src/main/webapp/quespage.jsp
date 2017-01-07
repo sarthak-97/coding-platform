@@ -32,7 +32,7 @@
 </div>
 <br>
 select ques no
-<form name=frm action="h" >
+<form name=frm action="hack.jsp" >
 <input type="submit" value="1" style="height:0.8cm;width:0.8cm" name=b1>
 <input type="button" value="2" style="height:0.8cm;width:0.8cm" name=b2>
 <input type="button" value="3" style="height:0.8cm;width:0.8cm" name=b3>
@@ -73,10 +73,14 @@ select ques no
 	</div>
 </div>
 <br>
-<form method="post" action="h1" >
+<form method="post" action="hack.jsp" >
 
 
+<<<<<<< HEAD
  <select class="language" name="lang">
+=======
+ <select class="language" name=t1>
+>>>>>>> branch 'master' of https://github.com/sarthak-97/google-login.git
   <option value="Select">Select</option>
   <option value="C">C</option>
   <option value="C++">C++</option>
@@ -89,7 +93,7 @@ select ques no
 <br>
 
 
-<textarea id="editor2" name="editor2"></textarea>
+<textarea id="editor2" name="t2"></textarea>
 
 
 <!-- load ace -->

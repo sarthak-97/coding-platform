@@ -35,8 +35,7 @@ public class h1 extends HttpServlet {
 
 	       request.setAttribute("t2",lang );
 	       request.setAttribute("t3",a ); 
-	      
-	       request.getRequestDispatcher("/NewFile.html").forward(request, response);
+	 
 	       
 	      
 	        
