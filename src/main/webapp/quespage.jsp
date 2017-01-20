@@ -96,10 +96,7 @@ select ques no
 <textarea id="editor2" name="t2"></textarea>
 
 
-<!-- load ace -->
-<script src="resources/src/ace.js"></script>
-<!-- load ace language tools -->
-<script src="resources/src/ext-language_tools.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     // trigger extension
     
