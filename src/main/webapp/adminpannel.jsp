@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form name=frm action=ques method=post>
+<form name=frm action=FileUploadServlet method=post enctype="multipart/form-data">
 enter question title<input type=text name=t1><br>
 enter ques detail<textarea name=t2>
 </textarea><br>
@@ -19,10 +19,8 @@ enter input format<textarea name=t7>
 </textarea><br>
 enter sample test case<textarea name=t4>
 </textarea><br>
-enter input test case<textarea name=t5>
-</textarea><br>
-enter output test case<textarea name=t6>
-</textarea><br>
+enter input test case<input type=file name=file><br>
+enter output test case<input type=file name=file1 ><br>
 <input type=submit>
 </form>
 </body>

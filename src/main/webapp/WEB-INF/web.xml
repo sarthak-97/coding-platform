@@ -30,6 +30,7 @@
   	<servlet-name>gapi</servlet-name>
   	<servlet-class>web.gapi</servlet-class>
   </servlet>
+  
  
  
   <servlet-mapping>
@@ -40,6 +41,7 @@
   	<servlet-name>gapi</servlet-name>
   	<url-pattern>/gapi</url-pattern>
   </servlet-mapping>
+  
  
     
 </web-app>
