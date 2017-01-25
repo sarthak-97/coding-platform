@@ -4,6 +4,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <meta charset="UTF-8">
   <title>ACE Autocompletion demo</title>
   <style type="text/css" media="screen">
@@ -22,6 +25,7 @@
   </style>
 </head>
 <body>
+
 <div align=right>
 <nav>
 <a href="quespage.jsp#ques">ques page</a>
@@ -73,14 +77,12 @@ select ques no
 	</div>
 </div>
 <br>
-<form method="post" action="hack.jsp" >
+<form method="post" action="h1"  >
 
 
-<<<<<<< HEAD
+
  <select class="language" name="lang">
-=======
- <select class="language" name=t1>
->>>>>>> branch 'master' of https://github.com/sarthak-97/google-login.git
+
   <option value="Select">Select</option>
   <option value="C">C</option>
   <option value="C++">C++</option>
@@ -90,18 +92,21 @@ select ques no
 <br>
 
 <br>
+<form action=h1 method=post>
+<input type="text" name="source" class="source" value="" id="source" /><br>
 <br>
-
-
-<textarea id="editor2" name="t2"></textarea>
-
+<textarea id="editor2" name="t2"  type="text"></textarea>
+</div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
 <script>
     // trigger extension
     
 
  
+
 
     var editor2 = ace.edit("editor2");
     editor2.setTheme("ace/theme/tomorrow_night_blue");
@@ -109,7 +114,13 @@ select ques no
     editor2.setAutoScrollEditorIntoView(true);
     editor2.setOption("maxLines", 16);
     editor2.setOption("minLines", 8);
-
+   var source = $("#editor2").val();
+   console.log("1");
+   $("#source").val('source');	
+   editor2.getSession().on("change", function () {
+       $("#source").val(editor2.getSession().getValue());
+     });
+   
    
     
 </script>
@@ -119,9 +130,9 @@ select ques no
 
 
 <input type="submit"  >
-<script src="resources/src/show_own_source.js "></script>
 
-</form>
+
+</form></div>
 </body>
 </html>
     
